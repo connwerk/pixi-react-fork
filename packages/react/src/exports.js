@@ -1,7 +1,7 @@
 import { PixiComponent, TYPES } from './utils/element';
 import { createRoot, render, unmountComponentAtNode } from './render';
 import Stage from './stage';
-import { PixiFiber, hostconfig } from './reconciler';
+import { PixiFiber, Reconciler, hostconfig } from './reconciler';
 import { Context as AppContext, AppProvider, AppConsumer, withPixiApp } from './stage/provider';
 import { useTick, useApp } from './hooks';
 import { withFilters } from './hoc';
@@ -23,6 +23,7 @@ export {
     PixiComponent,
     PixiFiber,
     hostconfig,
+    Reconciler,
     AppProvider,
     AppConsumer,
     AppContext,

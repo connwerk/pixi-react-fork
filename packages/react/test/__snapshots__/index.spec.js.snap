@@ -100,6 +100,7 @@ exports[`index export modules for index 1`] = `
     "shouldSuspend": [Function],
     "updateContainer": [Function],
   },
+  "Reconciler": [Function],
   "SimpleMesh": "SimpleMesh",
   "SimpleRope": "SimpleRope",
   "Sprite": "Sprite",

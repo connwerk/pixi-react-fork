@@ -413,6 +413,9 @@ export const AppConsumer: React.ComponentType<React.ConsumerProps<PixiApplicatio
 // fiber
 export const PixiFiber: Reconciler<any, any, any, any>;
 
+// re-exported reconciler from react
+export const Reconciler: (config: ReconcilerConfig) => Reconciler<any, any, any, any>;
+
 // default hostconfig
 export const hostconfig: ReconcilerConfig;
 
