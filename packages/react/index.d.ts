@@ -409,9 +409,7 @@ export const AppProvider: React.ComponentType<React.ProviderProps<PixiApplicatio
 export const AppConsumer: React.ComponentType<React.ConsumerProps<PixiApplication>>;
 
 // fiber
-export const PixiFiber: (
-    eventsMap?: { [P in keyof ReconcilerConfig]: (...args: any) => void }
-) => Reconciler<any, any, any, any>;
+export const PixiFiber: Reconciler<any, any, any, any>;
 
 // stage
 export class Stage extends React.Component<_ReactPixi.IStage> {}
