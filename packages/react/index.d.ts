@@ -71,6 +71,7 @@ interface ReconcilerConfig
     mountEventComponent(): void;
     updateEventComponent(): void;
     handleEventTarget(): void;
+    noTimeout: any;
     scheduleTimeout(...args: any[]): any;
     cancelTimeout(...args: any[]): any;
     supportsMicrotasks: boolean,
@@ -280,6 +281,11 @@ declare namespace _ReactPixi
       raf?: boolean;
 
       /**
+     * Use a custom reconciler.
+     */
+      fiber?: Reconciler<any, any, any, any>;
+
+      /**
      * Render the PIXI stage on React component changes.
      * You'll need to set raf={false}.
      */
@@ -393,7 +399,7 @@ export interface ReactPixiRoot {
     unmount(): void
 }
 
-export const createRoot: (container: PixiContainer) => ReactPixiRoot
+export const createRoot: (container: PixiContainer, fiber?: Reconciler<any, any, any, any>) => ReactPixiRoot
 
 // renderer
 export const render: (
@@ -403,7 +409,7 @@ export const render: (
 ) => any;
 
 // unmount component
-export const unmountComponentAtNode: (container: PixiContainer) => void;
+export const unmountComponentAtNode: (container: PixiContainer, fiber?: Reconciler<any, any, any, any>) => void;
 
 // context
 export const AppContext: React.Context<PixiApplication>;
