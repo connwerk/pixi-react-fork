@@ -73,6 +73,8 @@ interface ReconcilerConfig
     handleEventTarget(): void;
     scheduleTimeout(...args: any[]): any;
     cancelTimeout(...args: any[]): any;
+    supportsMicrotasks: boolean,
+    scheduleMicrotask(...args: any[]): any,
     appendChild(...args: any[]): any;
     appendChildToContainer(...args: any[]): any;
     removeChild(...args: any[]): any;
@@ -410,6 +412,9 @@ export const AppConsumer: React.ComponentType<React.ConsumerProps<PixiApplicatio
 
 // fiber
 export const PixiFiber: Reconciler<any, any, any, any>;
+
+// default hostconfig
+export const hostconfig: ReconcilerConfig;
 
 // stage
 export class Stage extends React.Component<_ReactPixi.IStage> {}
